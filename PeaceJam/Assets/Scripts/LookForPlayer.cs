@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class LookForPlayer : MonoBehaviour
 {
     // Establishing the area that the detector sees
     public Camera viewCamera;
     Plane[] planes;
+
+    public Light viewLight;
 
     // Establishing the dimensions of the player
     public GameObject player;
@@ -31,6 +34,7 @@ public class LookForPlayer : MonoBehaviour
         // Starting state for whether the detector can see
         lookingUp = false;
         GetComponent<Renderer>().material.color = Color.green;
+        viewLight.enabled = false;
         lookTimer = 0;
 
         playerSeen = false;
@@ -53,11 +57,13 @@ public class LookForPlayer : MonoBehaviour
             {
                 Debug.Log(name + " is looking up");
                 GetComponent<Renderer>().material.color = Color.red;
+                viewLight.enabled = true;
             }
             else
             {
                 Debug.Log(name + " is looking down");
                 GetComponent<Renderer>().material.color = Color.green;
+                viewLight.enabled = false;
             }
         }
 
