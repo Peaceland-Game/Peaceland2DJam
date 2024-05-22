@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &82595789 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1559196155035577153, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 268718582555963130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &107434784
 GameObject:
   m_ObjectHideFlags: 3
@@ -592,24 +586,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 268718582555963130}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &808308468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82595789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c309d64527c2dc647bd727d895c49dba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactAxis: Fire1
-  checkRadius: 1
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  showGizmos: 1
 --- !u!1 &886465914
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +809,7 @@ GameObject:
   - component: {fileID: 1152656472}
   - component: {fileID: 1152656471}
   - component: {fileID: 1152656474}
+  - component: {fileID: 1152656475}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -948,6 +925,50 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1152656475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152656470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1276474436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,21 +1324,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
-        type: 3}
-      propertyPath: checkDis
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
-        type: 3}
-      propertyPath: checkRadius
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
-        type: 3}
-      propertyPath: terrainMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 3736791514913120511, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
         type: 3}
       propertyPath: m_RootOrder
@@ -1376,9 +1382,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1559196155035577153, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 808308468}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa93141ab5ecb2e4886c59c76ba94cc5, type: 3}
