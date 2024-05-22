@@ -667,6 +667,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1100276897 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8153831996731403203, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+    type: 3}
+  m_PrefabInstance: {fileID: 268718582555963130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1149375190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1227,106 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: visualMesh
+      value: 
+      objectReference: {fileID: 1100276897}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobScaleMax.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobScaleMax.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobScaleMax.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobScaleMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobScaleMin.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobScaleMin.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobDecreaseRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobInecreaseRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobXCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobYCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobXCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobYCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobXCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobYCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobXCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobYCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobXCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588553158202716038, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
+        type: 3}
+      propertyPath: bobYCurve.m_Curve.Array.data[0].outSlope
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3736791514913120511, guid: aa93141ab5ecb2e4886c59c76ba94cc5,
         type: 3}
