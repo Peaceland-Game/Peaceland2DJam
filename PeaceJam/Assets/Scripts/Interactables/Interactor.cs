@@ -28,7 +28,7 @@ public class Interactor : MonoBehaviour
             Interactable interactable = colliders[0].GetComponent<Interactable>();
 
             if (interactable != null)
-                interactable.Interact();
+                interactable.Interact(this.transform);
         }
 
         holdInteract = isInteract;
