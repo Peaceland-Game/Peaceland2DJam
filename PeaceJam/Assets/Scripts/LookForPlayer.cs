@@ -24,9 +24,7 @@ public class LookForPlayer : MonoBehaviour
     public double lookThreshold;
 
     bool playerSeen; // test
-    UnityEvent Detected;
-    delegate void detectionDelegate(Transform source);
-    detectionDelegate detectedDialogue;
+    public UnityEvent Detected;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +86,7 @@ public class LookForPlayer : MonoBehaviour
             playerSeen = true;
             Debug.Log("Player seen by " + name);
 
-            //lookEnabled = false; // Stop checking for the player after they are initially detected
+            lookEnabled = false; // Stop checking for the player after they are initially detected
             Detected.Invoke();
         }
         else
