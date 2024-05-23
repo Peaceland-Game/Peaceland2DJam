@@ -31,10 +31,15 @@ public class DialgoueInteractable : Interactable
 
     private NPCState state;
 
+    private AudioSource audioSource;
+    public AudioClip interactSound;
+
     private void Start()
     {
         currentText = 0;
         dialogueLerp = 0.0f;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public override void Interact(Transform source)
@@ -42,6 +47,8 @@ public class DialgoueInteractable : Interactable
         base.Interact(source);
 
         this.listener = source;
+
+        audioSource.PlayOneShot(interactSound, 0.4f);
 
         // Startup dialogue 
         state = NPCState.TALKING;

@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 startVisualScale;
     private float startVisualLocalYPos;
 
+    private AudioSource audioSource;
+    public AudioClip walkSound;
+
     void Start()
     {
         startVisualScale = visualMesh.localScale;
@@ -36,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
         interpolateIdleToBob = 0.0f;
         bobLerp = 0.5f;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -53,6 +58,11 @@ public class PlayerController : MonoBehaviour
         if(direction.sqrMagnitude <= 0.01f) // Lessen bob influence 
         {
             interpolateIdleToBob = Mathf.Clamp01(interpolateIdleToBob - bobDecreaseRate * Time.deltaTime);
+            audioSource.Pause();
+        }
+        else if(direction.sqrMagnitude >= 0.02f && !audioSource.isPlaying)
+        {
+            audioSource.Play();
         }
 
         if (Physics.CheckSphere(this.transform.position + direction * checkDis, checkRadius, terrainMask))

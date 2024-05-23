@@ -26,6 +26,11 @@ public class LookForPlayer : MonoBehaviour
     bool playerSeen; // test
     public UnityEvent Detected;
 
+    private AudioSource audioSource;
+    public AudioClip lookUpSound;
+    public AudioClip lookDownSound;
+    public AudioClip detectedSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +53,8 @@ public class LookForPlayer : MonoBehaviour
         {
             Detected = new UnityEvent();
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -71,12 +78,16 @@ public class LookForPlayer : MonoBehaviour
                 Debug.Log(name + " is looking up");
                 GetComponent<Renderer>().material.color = Color.red;
                 viewLight.enabled = true;
+
+                audioSource.PlayOneShot(lookUpSound, 0.7f);
             }
             else
             {
                 Debug.Log(name + " is looking down");
                 GetComponent<Renderer>().material.color = Color.green;
                 viewLight.enabled = false;
+
+                audioSource.PlayOneShot(lookDownSound, 0.6f);
             }
         }
 
@@ -88,6 +99,8 @@ public class LookForPlayer : MonoBehaviour
 
             lookEnabled = false; // Stop checking for the player after they are initially detected
             Detected.Invoke();
+
+            audioSource.PlayOneShot(detectedSound, 0.6f);
         }
         else
         {
