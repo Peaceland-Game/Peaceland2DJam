@@ -25,10 +25,13 @@ public class Interactor : MonoBehaviour
                 return;
 
             // Only interact with first collider 
-            Interactable interactable = colliders[0].GetComponent<Interactable>();
+            Interactable[] interactable = colliders[0].GetComponents<Interactable>();
 
-            if (interactable != null)
-                interactable.Interact(this.transform);
+            if (interactable == null)
+                return;
+
+            for (int i = 0; i < interactable.Length; i++)
+                interactable[i].Interact(this.transform);
         }
 
         holdInteract = isInteract;

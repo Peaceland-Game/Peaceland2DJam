@@ -15,6 +15,7 @@ public class CamFocusInteractable : Interactable
 
     public override void Interact(Transform source)
     {
+        print("test");
         if (manager == null)
             return;
 
@@ -24,6 +25,11 @@ public class CamFocusInteractable : Interactable
         this.source = source;
 
         base.Interact(source);
+    }
+
+    public void ResetThisFocus()
+    {
+        manager.SwapToMainCam();
     }
 
     private void Awake()

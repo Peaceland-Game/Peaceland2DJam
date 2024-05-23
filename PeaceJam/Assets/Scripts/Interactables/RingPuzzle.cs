@@ -9,6 +9,8 @@ public class RingPuzzle : Interactable
     [SerializeField] float walkawayRange;
     private Transform player;
 
+    bool cleanup = false;
+
     private void Start()
     {
         ringPuzzleObj.SetActive(false);
@@ -18,18 +20,27 @@ public class RingPuzzle : Interactable
     {
         if(player != null)
         {
-            if(Vector3.Distance(this.transform.position, player.transform.position) > walkawayRange)
+            bool inRange = Vector3.Distance(this.transform.position, player.transform.position) <= walkawayRange;
+
+            if(!inRange)
             {
-                print("test");
+                // Pause puzzle when out of range 
+                ringPuzzleObj.SetActive(false);
                 ringPuzzleManager.canRun = false;
             }
         }
 
-        if(ringPuzzleManager.isComplete)
+        if(ringPuzzleManager.isComplete && !cleanup)
         {
             // Close game open door 
 
             ringPuzzleObj.SetActive(false);
+
+            CamFocusInteractable focus = this.GetComponent<CamFocusInteractable>(); 
+            if(focus != null)
+            {
+                focus.ResetThisFocus();
+            }
         }
     }
 
