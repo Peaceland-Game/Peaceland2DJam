@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Delay : MonoBehaviour
 {  
-   //Declare all of the game objects
-   public GameObject outerLock;
-   public GameObject middleLock;
-   public GameObject innerLock;
+    //Declare all of the game objects
+    public GameObject outerLock;
+    public GameObject middleLock;
+    public GameObject innerLock;
     public bool isComplete = false;
-
+   
+    public bool canRun = false;
    
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,10 @@ public class Delay : MonoBehaviour
     
     void Update()
     {
+        // Don't run untill started by interaction 
+        if (!canRun)
+            return;
+
         //Setting the Y rotationangle for each part of the lock
         Transform outerTransform = outerLock.transform;
         Transform midTransform = middleLock.transform;
