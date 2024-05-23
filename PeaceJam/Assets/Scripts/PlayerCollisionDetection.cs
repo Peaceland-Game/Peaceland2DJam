@@ -11,13 +11,16 @@ public class PlayerCollisionDetection : MonoBehaviour
 
     void Update()
     {
-        //detmines wether or not it is colliding with the table or key
-        if (Physics.CheckBox(transform.position, transform.localScale, new Quaternion(), tableLayer, new QueryTriggerInteraction()))
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 3)
         {
             Debug.Log("Collision with table");
         }
-
-        if (Physics.CheckBox(transform.position, transform.localScale, new Quaternion(), keyLayer, new QueryTriggerInteraction()))
+        if (collision.gameObject.layer == 6)
         {
             Debug.Log("Collision with key");
         }
