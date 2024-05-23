@@ -8,17 +8,15 @@ public class Delay : MonoBehaviour
    public GameObject outerLock;
    public GameObject middleLock;
    public GameObject innerLock;
+    public bool isComplete = false;
 
    
     // Start is called before the first frame update
     void Start()
-   {
+    {
       
         middleLock.SetActive(false);
         innerLock.SetActive(false);
-
-        
-
     }
     
     void Update()
@@ -34,25 +32,24 @@ public class Delay : MonoBehaviour
 
         float y = oRotation.eulerAngles.y;
         float z = mRotation.eulerAngles.y;
+        float x = iRotation.eulerAngles.y;
 
-        Debug.Log(y);
-        Debug.Log(z);
+       
 
         //if the lock is active, check and see if it is in the range
         if (outerLock.activeSelf)
         {
+            //When clicked,check the angles
             if (Input.GetMouseButtonDown(0))
             {
                 if (oRotation.eulerAngles.y >= 90 && oRotation.eulerAngles.y <= 120)
                 {
+                  
                     //if it is show the nect part 
                     middleLock.SetActive(true);
 
                 }
-                else
-                {
-                    return;
-                }
+            
                
 
             }
@@ -67,13 +64,35 @@ public class Delay : MonoBehaviour
                 if (mRotation.eulerAngles.y >= 315 && mRotation.eulerAngles.y <= 340)
                 {
                     innerLock.SetActive(true);
+                   
                 }
 
             }
 
         }
 
+
+        //Repeat the same process for the inner lock
+        if (innerLock.activeSelf)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (iRotation.eulerAngles.y >= 320 && iRotation.eulerAngles.y <= 360)
+                {
+                    //However, if it is completed, set isComplete to true to show that it is completed.
+                    isComplete = true;
+                    //UnityEditor.EditorApplication.isPlaying = false;
+                    //Application.Quit();
+                }
+
+            }
+
+        }
+
+
     }
+
+    
    
   
 
