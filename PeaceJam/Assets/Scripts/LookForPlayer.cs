@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.SceneManagement;
 
 public class LookForPlayer : MonoBehaviour
 {
@@ -88,6 +89,7 @@ public class LookForPlayer : MonoBehaviour
 
             lookEnabled = false; // Stop checking for the player after they are initially detected
             Detected.Invoke();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else
         {
