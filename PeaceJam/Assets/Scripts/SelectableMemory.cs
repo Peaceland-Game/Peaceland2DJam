@@ -28,10 +28,7 @@ public class SelectableMemory : MonoBehaviour
             if(Input.GetAxisRaw("Cancel") >= 0.1f)
             {
                 manager.SwapToMainCam();
-            }
-            else if(Input.GetMouseButtonDown(0))
-            {
-                SceneManager.LoadScene(sceneToLoad);
+                isFocusedOn=false;
             }
         }
     }
@@ -45,7 +42,16 @@ public class SelectableMemory : MonoBehaviour
         if (manager == null)
             return;
 
-        isFocusedOn = true;
-        manager.SwapCamera(cam);
+        if(isFocusedOn)
+        {
+            // Load scene
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            // Zoom in
+            isFocusedOn = true;
+            manager.SwapCamera(cam);
+        }
     }
 }
