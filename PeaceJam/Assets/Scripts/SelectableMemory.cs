@@ -2,10 +2,13 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectableMemory : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera cam;
+    [SerializeField] int sceneToLoad;
+
     private CameraManager manager;
     private bool isFocusedOn;
 
@@ -25,6 +28,10 @@ public class SelectableMemory : MonoBehaviour
             if(Input.GetAxisRaw("Cancel") >= 0.1f)
             {
                 manager.SwapToMainCam();
+            }
+            else if(Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene(sceneToLoad);
             }
         }
     }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class HubSelector : MonoBehaviour
 {
     [SerializeField] Camera cam;
+    [SerializeField] LayerMask memoryLayer;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +16,7 @@ public class HubSelector : MonoBehaviour
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 100, memoryLayer))
             {
                 SelectableMemory objectHit = hit.transform.GetComponent<SelectableMemory>();
 
@@ -31,12 +32,11 @@ public class HubSelector : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 point = cam.ScreenToWorldPoint(Input.mousePosition );
-        Ray fromScreenRay = new Ray(cam.transform.position, point - cam.transform.position);
-        //Ray ray = cam.ScreenToWorldPoint(Input.mousePosition);
+        //Ray fromScreenRay = new Ray(cam.transform.position, point - cam.transform.position);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(fromScreenRay, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
-            print("Hit");
             Gizmos.DrawSphere(hit.point, 0.1f);
         }
     }

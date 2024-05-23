@@ -26,6 +26,7 @@ public class CameraManager : MonoBehaviour
             curretCam.gameObject.SetActive(false);
 
         nextCam.gameObject.SetActive(true);
+        curretCam = nextCam;
     }
 
     /// <summary>
