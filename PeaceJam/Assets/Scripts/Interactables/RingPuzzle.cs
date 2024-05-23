@@ -49,6 +49,13 @@ public class RingPuzzle : Interactable
         if (ringPuzzleManager.isComplete)
             return;
 
+        Inventory inventory = source.GetComponent<Inventory>();
+        if (inventory == null)
+            return;
+
+        if (!inventory.hasKey)
+            return;
+
         player = source;
 
         ringPuzzleObj.SetActive(true);
