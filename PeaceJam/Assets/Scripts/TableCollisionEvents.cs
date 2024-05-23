@@ -30,7 +30,7 @@ public class TableCollisionEvents : MonoBehaviour
     {
         if (collision.rigidbody == player.GetComponent<Rigidbody>())
         {
-            Debug.Log("works");
+            Debug.Log(gameObject.transform.position - player.transform.position);
             gameObject.GetComponent<Rigidbody>().AddForce((gameObject.transform.position - player.transform.position) * force);
         }
     }
