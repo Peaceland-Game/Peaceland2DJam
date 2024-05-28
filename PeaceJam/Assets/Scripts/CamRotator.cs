@@ -24,19 +24,22 @@ public class CamRotator : MonoBehaviour
     void Update()
     {
         // Testing controls 
-        if(Input.GetKeyDown(KeyCode.E))
+        /*if(Input.GetKeyDown(KeyCode.E))
         {
             StartTurn(-90.0f);
         }
         else if(Input.GetKeyDown(KeyCode.Q))
         {
             StartTurn(90.0f);
-        }
+        }*/
     }
 
     public void SetTurn(float yRot, bool altTurn = false)
     {
         if (isTurning)
+            return;
+
+        if (((int)this.transform.eulerAngles.y == (360 - yRot)) || ((int)this.transform.eulerAngles.y == yRot)) // TODO: change to be not bad :3
             return;
 
         isTurning = true;
