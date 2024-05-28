@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
 
-        Vector3 direction = (new Vector3(horizontal, 0, vertical)).normalized;
+        Vector3 direction = this.transform.right * horizontal + this.transform.forward * vertical; // (new Vector3(horizontal, 0, vertical)).normalized;
         if(direction.sqrMagnitude <= 0.01f) // Lessen bob influence 
         {
             interpolateIdleToBob = Mathf.Clamp01(interpolateIdleToBob - bobDecreaseRate * Time.deltaTime);
@@ -96,10 +96,10 @@ public class PlayerController : MonoBehaviour
 
         Vector3 finalScale = Vector3.Lerp(startVisualScale, bobScale, interpolateIdleToBob);
         visualMesh.transform.localScale = finalScale;
-        visualMesh.transform.position = new Vector3(
-            visualMesh.position.x, 
+        visualMesh.transform.localPosition = new Vector3(
+            visualMesh.localPosition.x, 
             startVisualLocalYPos + (finalScale - startVisualScale).y * 0.5f, 
-            visualMesh.position.z);
+            visualMesh.localPosition.z);
     }
 
     private void OnDrawGizmosSelected()
