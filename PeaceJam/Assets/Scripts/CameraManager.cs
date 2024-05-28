@@ -36,4 +36,7 @@ public class CameraManager : MonoBehaviour
     {
         SwapCamera(mainCam);
     }
+
+    public CinemachineVirtualCamera MainCam
+    { get { return curretCam; } }
 }

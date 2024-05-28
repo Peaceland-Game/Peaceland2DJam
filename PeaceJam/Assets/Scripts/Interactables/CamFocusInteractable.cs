@@ -19,8 +19,12 @@ public class CamFocusInteractable : Interactable
         if (manager == null)
             return;
 
+        Debug.Log("Current cam is: " + cam);
+
         manager.SwapCamera(cam);
         focused = true;
+
+        Debug.Log("Current cam is: " + cam);
 
         this.source = source;
 
