@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Malachite
-  m_Shader: {fileID: -6465566751694194690, guid: 2de933b20859e28468c965c7119810ab,
+  m_Name: Eye
+  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,30 +38,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AngleOffset: 5
-    - _CellDensity: 6.32
-    - _GradientThresholdA: 0.33
-    - _GradientThresholdB: 0.48
-    - _Metallic: 0
+    - _EmissionMultiplier: 0.2
+    - _OutlineSize: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReScale: 0.2
-    - _Saturation: 1
     - _Smoothness: 0
-    - _angleOffset: 2
-    - _cellDensity: 5
-    - _noiseScale: 0.63
-    - _reScale: -0.17
-    - _timeScale: 0.1
     m_Colors:
-    - _GoopSize: {r: 0.29, g: 0.44, b: 0, a: 0}
-    - _Highlight: {r: 1, g: 1, b: 1, a: 1}
-    - _Primary: {r: 0.015208514, g: 0.29613832, b: 0.2831488, a: 1}
-    - _Secondary: {r: 0.0047769533, g: 0.013702081, b: 0.00699541, a: 1}
-    - _TimeScale: {r: -0.1, g: 0.15, b: 0, a: 0}
-    - _goopSize: {r: 0.3, g: 0.38, b: 0, a: 0}
+    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeColor: {r: 0.66172487, g: 0.67921257, b: 0.3566934, a: 1}
+    - _EyeSize: {r: 0.08, g: 0.11, b: 0, a: 0}
+    - _OutlineColor: {r: 0.331494, g: 0.33959982, b: 0.3490566, a: 1}
+    - _OutlineSize: {r: 0.09, g: 0.12, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &1470165066475881991
+--- !u!114 &142898030930259372
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
