@@ -46,6 +46,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReScale: 0.2
+    - _Saturation: 1
     - _Smoothness: 0
     - _angleOffset: 2
     - _cellDensity: 5
