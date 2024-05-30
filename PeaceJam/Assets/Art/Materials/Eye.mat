@@ -39,16 +39,21 @@ Material:
     m_Ints: []
     m_Floats:
     - _EmissionMultiplier: 0.2
+    - _EyeWobbleDistance: 0.03
+    - _EyeWobbleSpeed: 0.04
     - _OutlineSize: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
+    - _WobbleDistance: 0.1
+    - _WobbleSpeed: 0.5
     m_Colors:
     - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _EyeColor: {r: 0.66172487, g: 0.67921257, b: 0.3566934, a: 1}
     - _EyeSize: {r: 0.08, g: 0.11, b: 0, a: 0}
     - _OutlineColor: {r: 0.331494, g: 0.33959982, b: 0.3490566, a: 1}
     - _OutlineSize: {r: 0.09, g: 0.12, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &142898030930259372
 MonoBehaviour:
