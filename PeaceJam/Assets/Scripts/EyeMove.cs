@@ -12,7 +12,9 @@ using UnityEngine;
 public class EyeMove : MonoBehaviour
 {
     [SerializeField] private Transform bodyTransform;
-    [SerializeField] private float rotateSpeed = 1f;
+    [SerializeField] private float force = 1;
+    [SerializeField] private TorqueObject torqueObj;
+    [SerializeField] private float dotProduct;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +27,11 @@ public class EyeMove : MonoBehaviour
     {
         Vector3 eyesAngle = transform.forward;
         Vector3 bodyAngle = bodyTransform.forward;
-        float dotProduct = Vector3.Dot(eyesAngle, bodyAngle);
+        dotProduct = Vector3.Dot(eyesAngle, bodyAngle);
 
-        // Code partially copied from Unity Docs:
-        // https://docs.unity3d.com/ScriptReference/Vector3.RotateTowards.html
-        float singleStep = rotateSpeed * Time.deltaTime;
-        Vector3 newDirection = Vector3.RotateTowards(
-            eyesAngle, 
-            (bodyAngle * dotProduct).normalized,
-            singleStep, 
-            0);
-        transform.rotation = Quaternion.LookRotation(newDirection);
+        if(dotProduct < .99 && dotProduct > -.99)
+        {
+            torqueObj.ApplyTorque(bodyAngle * (1 / dotProduct) * force);
+        }
     }
 }

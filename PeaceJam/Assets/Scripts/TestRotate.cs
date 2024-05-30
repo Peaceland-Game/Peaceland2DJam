@@ -12,8 +12,8 @@ using UnityEngine;
 public class TestRotate : MonoBehaviour
 {
     private float timer = 0;
-    private float timerMax = 2;
-    private float rotationAngle = 50;
+    [SerializeField] private float timerMax = 2;
+    [SerializeField] private float rotationAngle = 75;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,6 @@ public class TestRotate : MonoBehaviour
             timer = 0;
             rotationAngle = -rotationAngle;
         }
-        transform.Rotate(transform.up, rotationAngle * Time.deltaTime);
+        transform.Rotate(Vector3.up, rotationAngle * Time.deltaTime);
     }
 }
