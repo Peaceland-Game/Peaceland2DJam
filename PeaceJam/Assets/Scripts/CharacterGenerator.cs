@@ -50,6 +50,11 @@ public class CharacterGenerator : MonoBehaviour
 
     }
 
+    private void SetCharacter(Renderer renderer, GooberMaterial material)
+    {
+
+    }
+
     
     private class GooberMaterial
     {
@@ -89,9 +94,60 @@ public class CharacterGenerator : MonoBehaviour
         public float DisCellDensity;
         public float DisTimeScale;
 
-        public GooberMaterial()
+        public GooberMaterial(
+            float timeScaleRange,
+            Vector2 direction,
+            float SimpleNoiseScale,
+            float SimpleGradientThresholdA,
+            float SimpleGradientThresholdB,
+            Vector2 SimpleCenter,
+            Vector2 SimpleSize,
+            float Rescale,
+            float AngleOffset,
+            float CellDensity,
+            float VoronoiGradientThresholdA,
+            float VoronoiGradientThresholdB,
+            Vector2 VoronoiCenter,
+            Vector2 VoronoiSize,
+            Color PrimaryColor,
+            Color SecondaryColor,
+            Color HighlightColor,
+            float Saturation,
+            float PrimaryMetallic,
+            float PrimarySmoothness,
+            float SecondaryMetallic,
+            float SecondarySmoothness,
+            float DisScale,
+            float DisAngleOffset,
+            float DisCellDensity,
+            float DisTimeScale)
         {
-
+            this.timeScaleRange = timeScaleRange;
+            this.direction = direction;
+            this.SimpleNoiseScale = SimpleNoiseScale;
+            this.SimpleGradientThresholdA = SimpleGradientThresholdA;
+            this.SimpleGradientThresholdB = SimpleGradientThresholdB;
+            this.SimpleCenter = SimpleCenter;
+            this.SimpleSize = SimpleSize;
+            this.Rescale = Rescale;
+            this.AngleOffset = AngleOffset;
+            this.CellDensity = CellDensity;
+            this.VoronoiGradientThresholdA = VoronoiGradientThresholdA;
+            this.VoronoiGradientThresholdB = VoronoiGradientThresholdB;
+            this.VoronoiCenter = VoronoiCenter;
+            this.VoronoiSize = VoronoiSize;  
+            this.PrimaryColor = PrimaryColor;
+            this.SecondaryColor = SecondaryColor;
+            this.HighlightColor = HighlightColor;
+            this.Saturation = Saturation;
+            this.PrimaryMetallic = PrimaryMetallic;
+            this.PrimarySmoothness = PrimarySmoothness;
+            this.SecondaryMetallic = SecondaryMetallic;
+            this.SecondarySmoothness = SecondarySmoothness;
+            this.DisScale = DisScale;
+            this.DisAngleOffset = DisAngleOffset;
+            this.DisCellDensity = DisCellDensity;
+            this.DisTimeScale = DisTimeScale;
         }
     }
 }

@@ -76,8 +76,8 @@ Material:
     - _GoopSize: {r: 0.29, g: 0.56, b: 0, a: 0}
     - _Highlight: {r: 1, g: 1, b: 1, a: 1}
     - _PatternDirection: {r: -1, g: -1, b: 0, a: 0}
-    - _Primary: {r: 0.0047769533, g: 0.013702081, b: 0.00699541, a: 1}
-    - _Secondary: {r: 0.05678171, g: 0.6226415, b: 0.5912048, a: 1}
+    - _Primary: {r: 0.054901965, g: 0.62352943, b: 0.5921569, a: 1}
+    - _Secondary: {r: 0, g: 0, b: 0, a: 1}
     - _SimpleCenter: {r: 0, g: -0.2, b: 0, a: 0}
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
     - _SimpleSize: {r: 0.48, g: 0.3, b: 0, a: 0}
