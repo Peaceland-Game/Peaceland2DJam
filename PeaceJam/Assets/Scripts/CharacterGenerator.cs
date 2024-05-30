@@ -107,7 +107,7 @@ public class CharacterGenerator : MonoBehaviour
         Material[] materials = renderer.materials;
         foreach(Material mat in materials)
         {
-            mat.SetFloat("_timeScaleRange", goober.TimeScaleRange);
+            mat.SetFloat("_TimeScale", goober.TimeScaleRange);
             mat.SetVector("_PatternDirection", goober.Direction);
             mat.SetFloat("_SimpleNoiseScale", goober.SimpleNoiseScale);
             mat.SetFloat("_SimpleGradientThresholdA", goober.SimpleGradientThresholdA);
@@ -129,9 +129,9 @@ public class CharacterGenerator : MonoBehaviour
             mat.SetFloat("_PrimarySmoothness", goober.PrimarySmoothness);
             mat.SetFloat("_SecondaryMetallic", goober.SecondaryMetallic);
             mat.SetFloat("_SecondarySmoothness", goober.SecondarySmoothness);
-            mat.SetFloat("_DisScale", goober.DisScale);
-            mat.SetFloat("_DisAngleOffset", goober.DisAngleOffset);
-            mat.SetFloat("_DisCellDensity", goober.DisCellDensity);
+            mat.SetFloat("_DisplacementScale", goober.DisScale);
+            mat.SetFloat("_VertexAngleOffset", goober.DisAngleOffset);
+            mat.SetFloat("_VertexCellDensity", goober.DisCellDensity);
             mat.SetFloat("_DisTimeScale", goober.DisTimeScale); 
         }
     }
