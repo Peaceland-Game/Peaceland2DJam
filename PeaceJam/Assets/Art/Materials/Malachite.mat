@@ -52,12 +52,14 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReScale: 0.2
+    - _Rescale: 0.2
     - _Saturation: 1
     - _SecondaryMetallic: 0.8
     - _SecondarySmoothness: 0.5
     - _SharperNoiseScale: 30
     - _SimpleGradientThresholdA: 0.34
     - _SimpleGradientThresholdB: 0.54
+    - _SimpleNoiseScale: 30
     - _Slider: 0
     - _Smoothness: 0.474
     - _TimeScale: 0.2
@@ -75,7 +77,7 @@ Material:
     - _Highlight: {r: 1, g: 1, b: 1, a: 1}
     - _PatternDirection: {r: -1, g: -1, b: 0, a: 0}
     - _Primary: {r: 0.0047769533, g: 0.013702081, b: 0.00699541, a: 1}
-    - _Secondary: {r: 0.015686275, g: 0.29803923, b: 0.28235295, a: 1}
+    - _Secondary: {r: 0.05678171, g: 0.6226415, b: 0.5912048, a: 1}
     - _SimpleCenter: {r: 0, g: -0.2, b: 0, a: 0}
     - _SimpleDirection: {r: 1, g: 1, b: 0, a: 0}
     - _SimpleSize: {r: 0.48, g: 0.3, b: 0, a: 0}
