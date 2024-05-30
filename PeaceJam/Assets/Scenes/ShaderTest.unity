@@ -5449,7 +5449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116590683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.75, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5470,42 +5470,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gooberCharacter: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
     type: 3}
-  characterCount: 0
-  spacing: {x: 0, y: 0}
-  timeScaleRange: {x: 0, y: 0}
-  dirA: {x: 0, y: 0}
-  dirB: {x: 0, y: 0}
-  SimpleNoiseScaleRange: {x: 0, y: 0}
-  SimpleGradientThresholdARange: {x: 0, y: 0}
-  SimpleGradientThresholdBRange: {x: 0, y: 0}
-  SimpleCenterXRange: {x: 0, y: 0}
-  SimpleCenterYRange: {x: 0, y: 0}
-  SimpleSizeXRange: {x: 0, y: 0}
-  SimpleSizeYRange: {x: 0, y: 0}
-  RescaleRange: {x: 0, y: 0}
-  AngleOffsetRange: {x: 0, y: 0}
-  CellDensityRange: {x: 0, y: 0}
-  VoronoiGradientThresholdARange: {x: 0, y: 0}
-  VoronoiGradientThresholdBRange: {x: 0, y: 0}
-  VoronoiCenterXRange: {x: 0, y: 0}
-  VoronoiCenterYRange: {x: 0, y: 0}
-  VoronoiSizeXRange: {x: 0, y: 0}
-  VoronoiSizeYRange: {x: 0, y: 0}
+  characterCount: 50
+  spacing: {x: 1.2, y: 0}
+  timeScaleRange: {x: 0.1, y: 0.3}
+  dirA: {x: -1, y: -1}
+  dirB: {x: 1, y: 1}
+  SimpleNoiseScaleRange: {x: 10, y: 50}
+  SimpleGradientThresholdARange: {x: 0.1, y: 0.2}
+  SimpleGradientThresholdBRange: {x: 0.3, y: 0.9}
+  SimpleCenterXRange: {x: -0.2, y: 0.2}
+  SimpleCenterYRange: {x: -0.2, y: 0.4}
+  SimpleSizeXRange: {x: 0.2, y: 1}
+  SimpleSizeYRange: {x: 0.2, y: 1}
+  RescaleRange: {x: 0.1, y: 0.3}
+  AngleOffsetRange: {x: 1, y: 50}
+  CellDensityRange: {x: 2, y: 15}
+  VoronoiGradientThresholdARange: {x: 0.3, y: 0.5}
+  VoronoiGradientThresholdBRange: {x: 0.55, y: 0.8}
+  VoronoiCenterXRange: {x: -0.1, y: 0.1}
+  VoronoiCenterYRange: {x: -0.1, y: 0.1}
+  VoronoiSizeXRange: {x: 0.2, y: 0.7}
+  VoronoiSizeYRange: {x: 0.2, y: 0.7}
   PrimaryColorRange:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.32156864, g: 0.50980395, b: 0.40784317, a: 1}
+    key1: {r: 0.13333334, g: 0.58431375, b: 0.57254905, a: 1}
+    key2: {r: 0.41960788, g: 0.9058824, b: 0.8745099, a: 0}
+    key3: {r: 0.25490198, g: 0.26666668, b: 0.22352943, a: 0}
+    key4: {r: 0.058823533, g: 0.121568635, b: 0.078431375, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
+    ctime1: 11758
+    ctime2: 31611
+    ctime3: 51079
+    ctime4: 65535
     ctime5: 0
     ctime6: 0
     ctime7: 0
@@ -5519,23 +5519,23 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 2
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
   SecondaryColorRange:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.7137255, g: 0.6627451, b: 0.5764706, a: 1}
+    key1: {r: 0.6392157, g: 0.18823531, b: 0.10196079, a: 1}
+    key2: {r: 0.4901961, g: 0.08627451, b: 0.050980397, a: 0}
+    key3: {r: 0.3647059, g: 0.09019608, b: 0.07450981, a: 0}
+    key4: {r: 0.16470589, g: 0.050980397, b: 0.03529412, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
+    ctime1: 14264
+    ctime2: 29491
+    ctime3: 48766
+    ctime4: 65535
     ctime5: 0
     ctime6: 0
     ctime7: 0
@@ -5549,12 +5549,12 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 2
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
   HighlightColorRange:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.7137255, g: 0.6627451, b: 0.5764706, a: 1}
+    key1: {r: 0, g: 0, b: 0, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5581,15 +5581,15 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  SaturationRange: {x: 0, y: 0}
-  PrimaryMetallicRange: {x: 0, y: 0}
-  PrimarySmoothnessRange: {x: 0, y: 0}
-  SecondaryMetallicRange: {x: 0, y: 0}
-  SecondarySmoothnessRange: {x: 0, y: 0}
-  DisScaleRange: {x: 0, y: 0}
-  DisAngleOffsetRange: {x: 0, y: 0}
-  DisCellDensityRange: {x: 0, y: 0}
-  DisTimeScaleRange: {x: 0, y: 0}
+  SaturationRange: {x: 0, y: 1}
+  PrimaryMetallicRange: {x: 0, y: 0.3}
+  PrimarySmoothnessRange: {x: 0, y: 0.3}
+  SecondaryMetallicRange: {x: 0.5, y: 1}
+  SecondarySmoothnessRange: {x: 0.5, y: 1}
+  DisScaleRange: {x: 0.001, y: 0.02}
+  DisAngleOffsetRange: {x: 1, y: 20}
+  DisCellDensityRange: {x: 1, y: 5}
+  DisTimeScaleRange: {x: 0.1, y: 0.25}
 --- !u!1 &1260490481
 GameObject:
   m_ObjectHideFlags: 0

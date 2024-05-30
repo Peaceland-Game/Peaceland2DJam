@@ -45,22 +45,103 @@ public class CharacterGenerator : MonoBehaviour
     [SerializeField] Vector2 DisCellDensityRange;
     [SerializeField] Vector2 DisTimeScaleRange;
 
-    private void SpawnCharacters()
+    private void Start()
     {
-
+        for (int i = 0; i < characterCount; i++)
+        {
+            SpawnCharacters(i);
+        }
     }
 
-    private void SetCharacter(Renderer renderer, GooberMaterial material)
+    private void SpawnCharacters(int index)
     {
+        GooberMaterial gooberMat = new GooberMaterial(
+            RandomRange(timeScaleRange),
+            new Vector2(Random.Range(dirA.x, dirB.x), Random.Range(dirA.y, dirB.y)),
 
+            RandomRange(SimpleNoiseScaleRange),
+            RandomRange(SimpleGradientThresholdARange),
+            RandomRange(SimpleGradientThresholdBRange),
+            RandomRange(SimpleCenterXRange, SimpleCenterYRange),
+            RandomRange(SimpleSizeXRange, SimpleSizeYRange),
+
+            RandomRange(RescaleRange),
+            RandomRange(AngleOffsetRange),
+            RandomRange(CellDensityRange),
+            RandomRange(VoronoiGradientThresholdARange),
+            RandomRange(VoronoiGradientThresholdBRange),
+            RandomRange(VoronoiCenterXRange, VoronoiCenterYRange),
+            RandomRange(VoronoiSizeXRange, VoronoiSizeYRange),
+
+            PrimaryColorRange.Evaluate(Random.Range(0.0f, 1.0f)),
+            SecondaryColorRange.Evaluate(Random.Range(0.0f, 1.0f)),
+            HighlightColorRange.Evaluate(Random.Range(0.0f, 1.0f)),
+            RandomRange(SaturationRange),
+            RandomRange(PrimaryMetallicRange),
+            RandomRange(SecondaryMetallicRange),
+            RandomRange(PrimarySmoothnessRange),
+            RandomRange(SecondarySmoothnessRange),
+
+            RandomRange(DisScaleRange),
+            RandomRange(DisAngleOffsetRange),
+            RandomRange(DisCellDensityRange),
+            RandomRange(DisTimeScaleRange)
+            );
+
+        GameObject goober = Instantiate(gooberCharacter, this.transform.position + new Vector3(this.transform.position.x + index * spacing.x, 0.0f, this.transform.position.z), Quaternion.LookRotation(-Vector3.forward));
+        SetCharacter(goober.GetComponentInChildren<Renderer>(), gooberMat);
+    }
+
+    private float RandomRange(Vector2 range)
+    {
+        return Random.Range(range.x, range.y);  
+    }
+
+    private Vector2 RandomRange(Vector2 rangeX, Vector2 rangeY)
+    {
+        return new Vector2(RandomRange(rangeX), RandomRange(rangeY));
+    }
+
+    private void SetCharacter(Renderer renderer, GooberMaterial goober)
+    {
+        Material[] materials = renderer.materials;
+        foreach(Material mat in materials)
+        {
+            mat.SetFloat("_timeScaleRange", goober.TimeScaleRange);
+            mat.SetVector("_PatternDirection", goober.Direction);
+            mat.SetFloat("_SimpleNoiseScale", goober.SimpleNoiseScale);
+            mat.SetFloat("_SimpleGradientThresholdA", goober.SimpleGradientThresholdA);
+            mat.SetFloat("_SimpleGradientThresholdB", goober.SimpleGradientThresholdB);
+            mat.SetVector("_SimpleCenter", goober.SimpleCenter);
+            mat.SetVector("_SimpleSize", goober.SimpleSize);
+            mat.SetFloat("_Rescale", goober.Rescale);
+            mat.SetFloat("_AngleOffset", goober.AngleOffset);
+            mat.SetFloat("_CellDensity", goober.CellDensity);
+            mat.SetFloat("_VoronoiGradientThresholdA", goober.VoronoiGradientThresholdA);
+            mat.SetFloat("_VoronoiGradientThresholdB", goober.VoronoiGradientThresholdB);
+            mat.SetVector("_VoronoiCenter", goober.VoronoiCenter);
+            mat.SetVector("_VoronoiSize", goober.VoronoiSize);
+            mat.SetColor("_Primary", goober.Primary);
+            mat.SetColor("_Secondary", goober.Secondary);
+            mat.SetColor("_Highlight", goober.Highlight);
+            mat.SetFloat("_Saturation", goober.Saturation);
+            mat.SetFloat("_PrimaryMetallic", goober.PrimaryMetallic);
+            mat.SetFloat("_PrimarySmoothness", goober.PrimarySmoothness);
+            mat.SetFloat("_SecondaryMetallic", goober.SecondaryMetallic);
+            mat.SetFloat("_SecondarySmoothness", goober.SecondarySmoothness);
+            mat.SetFloat("_DisScale", goober.DisScale);
+            mat.SetFloat("_DisAngleOffset", goober.DisAngleOffset);
+            mat.SetFloat("_DisCellDensity", goober.DisCellDensity);
+            mat.SetFloat("_DisTimeScale", goober.DisTimeScale); 
+        }
     }
 
     
     private class GooberMaterial
     {
         // Pattern Settings 
-        public float timeScaleRange;
-        public Vector2 direction;
+        public float TimeScaleRange;
+        public Vector2 Direction;
 
         // SimpleNoise
         public float SimpleNoiseScale;
@@ -79,13 +160,13 @@ public class CharacterGenerator : MonoBehaviour
         public Vector2 VoronoiSize;
 
         // Color
-        public Color PrimaryColor;
-        public Color SecondaryColor;
-        public Color HighlightColor;
+        public Color Primary;
+        public Color Secondary;
+        public Color Highlight;
         public float Saturation;
         public float PrimaryMetallic;
-        public float PrimarySmoothness;
         public float SecondaryMetallic;
+        public float PrimarySmoothness;
         public float SecondarySmoothness;
 
         // VertexDisplacement
@@ -114,16 +195,16 @@ public class CharacterGenerator : MonoBehaviour
             Color HighlightColor,
             float Saturation,
             float PrimaryMetallic,
-            float PrimarySmoothness,
             float SecondaryMetallic,
+            float PrimarySmoothness,
             float SecondarySmoothness,
             float DisScale,
             float DisAngleOffset,
             float DisCellDensity,
             float DisTimeScale)
         {
-            this.timeScaleRange = timeScaleRange;
-            this.direction = direction;
+            this.TimeScaleRange = timeScaleRange;
+            this.Direction = direction;
             this.SimpleNoiseScale = SimpleNoiseScale;
             this.SimpleGradientThresholdA = SimpleGradientThresholdA;
             this.SimpleGradientThresholdB = SimpleGradientThresholdB;
@@ -136,9 +217,9 @@ public class CharacterGenerator : MonoBehaviour
             this.VoronoiGradientThresholdB = VoronoiGradientThresholdB;
             this.VoronoiCenter = VoronoiCenter;
             this.VoronoiSize = VoronoiSize;  
-            this.PrimaryColor = PrimaryColor;
-            this.SecondaryColor = SecondaryColor;
-            this.HighlightColor = HighlightColor;
+            this.Primary = PrimaryColor;
+            this.Secondary = SecondaryColor;
+            this.Highlight = HighlightColor;
             this.Saturation = Saturation;
             this.PrimaryMetallic = PrimaryMetallic;
             this.PrimarySmoothness = PrimarySmoothness;
