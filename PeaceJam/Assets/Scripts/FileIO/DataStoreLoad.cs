@@ -32,11 +32,11 @@ public class DataStoreLoad
     /// <param name="score"></param>
     /// <param name="collisions"></param>
     /// <param name="time"></param>
-    public void StoreSample(string packageName, string path, float score, int collisions, float time)
+    public void StoreSample(string bundleName, string path, float score, int collisions, float time)
     {
         // Create a new PlayerData to override previous data 
         FileIO.DataBundle data = new FileIO.DataBundle();
-        data.bundleName = packageName;
+        data.bundleName = bundleName;
 
 
         // Score

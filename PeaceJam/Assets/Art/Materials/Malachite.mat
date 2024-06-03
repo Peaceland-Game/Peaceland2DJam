@@ -47,7 +47,7 @@ Material:
     - _GradientThresholdB: 0.48
     - _Metallic: 0
     - _NoiseType: 1
-    - _PrimaryMetallic: 0
+    - _PrimaryMetallic: 0.1
     - _PrimarySmoothness: 0
     - _QueueControl: 0
     - _QueueOffset: 0

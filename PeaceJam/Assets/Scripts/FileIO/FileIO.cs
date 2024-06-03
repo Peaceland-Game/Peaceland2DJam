@@ -21,15 +21,15 @@ public class FileIO
     [SerializeField] DataBundle playerSample2;
 
     /// <summary>
-    /// Load a json file if possible. Filepath must include .json and consider
+    /// Load a json file if possible. Consider that the
     /// starting directory to be from jsons folder 
     /// </summary>
     /// <param name="playerName"></param>
     /// <returns></returns>
-    public DataBundle LoadData(string path)
+    public DataBundle LoadData(string bundleName, string path = "")
     {
         string basePath = Directory.GetCurrentDirectory() + "\\jsons\\";
-        string finalPath = basePath + path;
+        string finalPath = basePath + path + bundleName + ".json";
 
         if (!File.Exists(finalPath))
         {
@@ -47,7 +47,7 @@ public class FileIO
     /// as a json directory
     /// </summary>
     /// <param name="data"></param>
-    public void StoreData(DataBundle data, string path)
+    public void StoreData(DataBundle data, string path = "")
     {
         string basePath = Directory.GetCurrentDirectory() + "\\jsons\\";
         string finalPath = basePath + path + data.bundleName + ".json";
@@ -75,14 +75,14 @@ public class FileIO
         /// Get the level data by passing in its name. If level 
         /// does not exists returns null 
         /// </summary>
-        /// <param name="levelName"></param>
+        /// <param name="packetName"></param>
         /// <returns></returns>
-        public Packet GetPacket(string levelName)
+        public Packet GetPacket(string packetName)
         {
-            foreach (Packet levelData in dataPackets)
+            foreach (Packet packet in dataPackets)
             {
-                if (levelData.packetName == levelName)
-                    return levelData;
+                if (packet.packetName == packetName)
+                    return packet;
             }
 
             return null;
