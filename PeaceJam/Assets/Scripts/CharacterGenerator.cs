@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,7 +58,7 @@ public class CharacterGenerator : MonoBehaviour
     {
         GooberMaterial gooberMat = new GooberMaterial(
             RandomRange(timeScaleRange),
-            new Vector2(Random.Range(dirA.x, dirB.x), Random.Range(dirA.y, dirB.y)),
+            new Vector2(UnityEngine.Random.Range(dirA.x, dirB.x), UnityEngine.Random.Range(dirA.y, dirB.y)),
 
             RandomRange(SimpleNoiseScaleRange),
             RandomRange(SimpleGradientThresholdARange),
@@ -73,9 +74,9 @@ public class CharacterGenerator : MonoBehaviour
             RandomRange(VoronoiCenterXRange, VoronoiCenterYRange),
             RandomRange(VoronoiSizeXRange, VoronoiSizeYRange),
 
-            PrimaryColorRange.Evaluate(Random.Range(0.0f, 1.0f)),
-            SecondaryColorRange.Evaluate(Random.Range(0.0f, 1.0f)),
-            HighlightColorRange.Evaluate(Random.Range(0.0f, 1.0f)),
+            PrimaryColorRange.Evaluate(UnityEngine.Random.Range(0.0f, 1.0f)),
+            SecondaryColorRange.Evaluate(UnityEngine.Random.Range(0.0f, 1.0f)),
+            HighlightColorRange.Evaluate(UnityEngine.Random.Range(0.0f, 1.0f)),
             RandomRange(SaturationRange),
             RandomRange(PrimaryMetallicRange),
             RandomRange(SecondaryMetallicRange),
@@ -94,7 +95,7 @@ public class CharacterGenerator : MonoBehaviour
 
     private float RandomRange(Vector2 range)
     {
-        return Random.Range(range.x, range.y);  
+        return UnityEngine.Random.Range(range.x, range.y);  
     }
 
     private Vector2 RandomRange(Vector2 rangeX, Vector2 rangeY)

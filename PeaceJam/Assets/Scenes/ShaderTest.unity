@@ -345,6 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348258172}
   - component: {fileID: 348258171}
+  - component: {fileID: 348258173}
   m_Layer: 0
   m_Name: ShaderGizmos
   m_TagString: Untagged
@@ -379,6 +380,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -9.368, y: -17.337, z: -14.951}
+--- !u!114 &348258173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348258170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4156b23aa63ad4aa353f993e155236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 1456481757}
+  shaderGizmos:
+  - varName: 
+    gizmoType: 0
+    space: 0
+  shader: {fileID: -6465566751694194690, guid: 2de933b20859e28468c965c7119810ab, type: 3}
+  properties:
+    colors: []
+    vectors: []
+    floats: []
+    texs: []
+    ints: 
 --- !u!1 &353390167
 GameObject:
   m_ObjectHideFlags: 0
@@ -20498,6 +20523,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde3f6cb027b47449be1329db0380952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &1456481757 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1440604796310629110, guid: 9675b1eabd7a22347a31c8d409ed661a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4789485115894131514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1659846933
 GameObject:
   m_ObjectHideFlags: 0

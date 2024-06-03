@@ -8,6 +8,5 @@ public class FileIOTester : MonoBehaviour
     {
         DataStoreLoad dsl = new DataStoreLoad();
         dsl.StoreSample("Package", "", 5, 0, 1);
-        print(dsl.GetFloat("Package", "SampleLevel", "score"));
     }
 }
