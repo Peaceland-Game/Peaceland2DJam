@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class ShaderPropertiesEditor : MonoBehaviour
+[CustomEditor(typeof(ShaderPropertyEdit))]
+public class ShaderPropertiesEditor : Editor
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnInspectorGUI()
     {
-        
-    }
+        base.OnInspectorGUI();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ShaderPropertyEdit myScript = (ShaderPropertyEdit)target;
+        if (GUILayout.Button("Load Properties"))
+        {
+            myScript.LoadProperties();
+        }
+        if (GUILayout.Button("Generate Properties"))
+        {
+            myScript.GenerateRandomProperties();
+        }
     }
 }

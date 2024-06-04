@@ -1,18 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+[ExecuteInEditMode]
 public class ShaderPropertyEdit : MonoBehaviour
 {
     [SerializeField] Shader shader;
     [SerializeField] ShaderProperties propertiesBP;
     [SerializeField] RangeProperties propertiesRanges;
+    [Space]
+    [SerializeField] int numToGenerate; 
     [SerializeField] List<ShaderProperties> generatedProperties;
 
-    // Start is called before the first frame update
-    void Start()
+    
+
+
+    public void LoadProperties()
     {
         propertiesBP = new ShaderProperties();
 
@@ -24,10 +30,6 @@ public class ShaderPropertyEdit : MonoBehaviour
             {
                 string name = shader.GetPropertyName(i);
                 ShaderPropertyType type = shader.GetPropertyType(i);
-
-
-                print(shader.GetPropertyName(i) + ": " + shader.GetPropertyType(i));
-
 
                 Tuple<string, ShaderPropertyType> nameAndType =
                     new Tuple<string, ShaderPropertyType>(shader.GetPropertyName(i), shader.GetPropertyType(i));
@@ -69,6 +71,18 @@ public class ShaderPropertyEdit : MonoBehaviour
     }
 
 
+    public void GenerateRandomProperties()
+    {
+        if (propertiesRanges == null)
+            return;
+
+        generatedProperties = new List<ShaderProperties>();
+
+        for (int i = 0; i < numToGenerate; i++)
+        {
+            generatedProperties.Add(propertiesRanges.GenerateSP());
+        }
+    }
 
     [Serializable]
     private class ShaderProperties
@@ -134,6 +148,8 @@ public class ShaderPropertyEdit : MonoBehaviour
         [SerializeField] public List<Texture> texs = new List<Texture>();
         [SerializeField] public List<IntRange> ints = new List<IntRange>();
 
+        private ShaderProperties bluePrint; 
+
         /// <summary>
         /// Generate the random range structures using the
         /// given properties object as a blueprint 
@@ -141,6 +157,8 @@ public class ShaderPropertyEdit : MonoBehaviour
         /// <param name="properties"></param>
         public RangeProperties(ShaderProperties properties)
         {
+            bluePrint = properties;
+
             foreach (Tuple<string, ShaderPropertyType> tuple in properties.nameAndType)
             {
                 string name = tuple.Item1;
@@ -182,7 +200,42 @@ public class ShaderPropertyEdit : MonoBehaviour
         /// <returns></returns>
         public ShaderProperties GenerateSP()
         {
-            return null;
+            ShaderProperties sp = new ShaderProperties();
+            
+            for(int i = 0; i < bluePrint.nameAndType.Count; i++)
+            {
+                string name = bluePrint.nameAndType[i].Item1;
+                ShaderPropertyType type = bluePrint.nameAndType[i].Item2;
+                int index = bluePrint.nameToIndex[name];
+
+                switch (type)
+                {
+                    case ShaderPropertyType.Color:
+                        sp.colors.Add(colors[index].gradient.Evaluate(UnityEngine.Random.Range(0.0f, 1.0f)));
+                        break;
+                    case ShaderPropertyType.Vector:
+                        sp.vectors.Add(RandVec(vectors[index].minRange, vectors[index].maxRange));
+                        break;
+                    case ShaderPropertyType.Float:
+                        sp.floats.Add(UnityEngine.Random.Range(floats[index].range.x, floats[index].range.y));
+                        break;
+                    case ShaderPropertyType.Range:
+                        sp.ranges.Add(
+                            new SFloatRange(
+                                UnityEngine.Random.Range(ranges[index].range.x, ranges[index].range.y), 
+                                ranges[index].range));
+                        break;
+                    case ShaderPropertyType.Texture:
+                        break;
+                    case ShaderPropertyType.Int:
+                        sp.ints.Add(UnityEngine.Random.Range(ints[index].range.x, ints[index].range.y));
+                        break;
+                }
+            }
+
+            sp.texs = texs;
+
+            return sp;
         }
     }
 
@@ -190,7 +243,7 @@ public class ShaderPropertyEdit : MonoBehaviour
     private class ColorRange
     {
         [SerializeField] public string colorName;
-        [SerializeField] public Gradient gradient;
+        [SerializeField] public Gradient gradient = new Gradient();
 
         public ColorRange(string name)
         {
@@ -247,5 +300,14 @@ public class ShaderPropertyEdit : MonoBehaviour
         }
     }
 
-
+    private static Vector4 RandVec(Vector4 min, Vector4 max)
+    {
+        return new Vector4
+            (
+                UnityEngine.Random.Range(min.x, max.x),
+                UnityEngine.Random.Range(min.y, max.y),
+                UnityEngine.Random.Range(min.z, max.z),
+                UnityEngine.Random.Range(min.w, max.w)
+            );
+    }
 }
