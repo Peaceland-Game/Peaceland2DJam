@@ -5,9 +5,16 @@ using UnityEngine;
 public class CharacterVisualController : MonoBehaviour
 {
 
+    [Header("Debug")]
     [SerializeField] Renderer renderer;
     [SerializeField] float speed;
     [SerializeField] AnimationCurve curve;
+
+    [Header("Overall Visuals")]
+    [SerializeField] EmotionalState emotionalState;
+
+    [Header("Eyes")]
+    [SerializeField] List<Renderer> eyes;
 
     private Material[] materials;
 
@@ -21,6 +28,44 @@ public class CharacterVisualController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DebugLogic();
+        EyeLogic();
+    }
+
+    private void EyeLogic()
+    {
+        switch (emotionalState)
+        {
+            case EmotionalState.CONTENT:
+                break;
+            case EmotionalState.SLEEPY:
+                break;
+            case EmotionalState.STUNNED:
+                break;
+            case EmotionalState.ANGRY:
+                break;
+            case EmotionalState.PLEASE:
+                break;
+            case EmotionalState.JOYFUL:
+                break;
+        }
+    }
+
+    private enum EmotionalState
+    { 
+        CONTENT,
+        SLEEPY,
+        STUNNED,
+        ANGRY,
+        PLEASE,
+        JOYFUL
+    }
+
+
+    #region Debug
+
+    private void DebugLogic()
+    {
         if (activeCoroutines > 0)
             return;
 
@@ -28,13 +73,12 @@ public class CharacterVisualController : MonoBehaviour
 
         if (shouldTransition)
         {
-            foreach(Material mat in materials)
+            foreach (Material mat in materials)
             {
                 StartCoroutine(Transition(mat));
                 activeCoroutines++;
             }
         }
-        
     }
 
     private IEnumerator Transition(Material mat)
@@ -64,4 +108,6 @@ public class CharacterVisualController : MonoBehaviour
 
         activeCoroutines--;
     }
+
+    #endregion
 }
