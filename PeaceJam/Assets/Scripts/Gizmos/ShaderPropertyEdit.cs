@@ -8,14 +8,21 @@ using UnityEngine.Rendering;
 [ExecuteInEditMode]
 public class ShaderPropertyEdit : MonoBehaviour
 {
+    [Tooltip("Takes the attributes from this shader and builds a blueprint")]
     [SerializeField] Shader shader;
+    [Tooltip("Materials that attributes are loaded into")]
     [SerializeField] List<Material> targetMaterials;
     [Space]
-    [SerializeField] ShaderProperties propertiesBP;
+    [Tooltip("Defines the ranges that random values can be chosen from")]
     [SerializeField] RangeProperties propertiesRanges;
     [Space]
-    [SerializeField] int numToGenerate; 
+    [Tooltip("How many property sets would you like to generate")]
+    [SerializeField] int numToGenerate;
+    [Tooltip("Resulting generated property sets. Top of the list are applied to target materials")]
     [SerializeField] List<ShaderProperties> generatedProperties;
+    [Space]
+
+    private static ShaderProperties propertiesBP;
 
 
     public void LoadProperties()
@@ -65,11 +72,13 @@ public class ShaderPropertyEdit : MonoBehaviour
                 }
             }
         }
+    }
 
+    public void OverrideRanges()
+    {
         // Create ranges object 
         propertiesRanges = new RangeProperties(propertiesBP);
     }
-
 
     public void GenerateRandomProperties()
     {
@@ -77,10 +86,12 @@ public class ShaderPropertyEdit : MonoBehaviour
             return;
 
         generatedProperties = new List<ShaderProperties>();
-
+        
         for (int i = 0; i < numToGenerate; i++)
         {
-            generatedProperties.Add(propertiesRanges.GenerateSP(propertiesBP));
+            ShaderProperties properties = propertiesRanges.GenerateSP(propertiesBP);
+            if(properties != null)
+                generatedProperties.Add(properties);
         }
     }
 
@@ -88,34 +99,40 @@ public class ShaderPropertyEdit : MonoBehaviour
     {
         // Take the top materials and apply the equal amount of
         // top properties to thme if possible 
-
+        
         for (int i = 0; i < targetMaterials.Count; i++)
         {
             // Check if within generatedProperties range
             if (i >= generatedProperties.Count)
                 break;
-
+            
             ShaderProperties curr = generatedProperties[i];
-
+            print(curr.nameAndType.Count);
             for(int j = 0; j < curr.nameAndType.Count; j++)
             {
                 string name = curr.nameAndType[j].Item1;
                 ShaderPropertyType type = curr.nameAndType[j].Item2;
                 int index = curr.nameToIndex[name];
-
+               
                 switch (type)
                 {
                     case ShaderPropertyType.Color:
+                        targetMaterials[i].SetColor(name, curr.colors[index]);
                         break;
                     case ShaderPropertyType.Vector:
+                        targetMaterials[i].SetVector(name, curr.vectors[index]);
                         break;
                     case ShaderPropertyType.Float:
+                        targetMaterials[i].SetFloat(name, curr.floats[index]);
                         break;
                     case ShaderPropertyType.Range:
+                        targetMaterials[i].SetFloat(name, curr.ranges[index].GetValue());
                         break;
                     case ShaderPropertyType.Texture:
+                        targetMaterials[i].SetTexture(name, curr.texs[index]);
                         break;
                     case ShaderPropertyType.Int:
+                        targetMaterials[i].SetInt(name, curr.ints[index]);
                         break;
                 }
             }
@@ -128,9 +145,9 @@ public class ShaderPropertyEdit : MonoBehaviour
         public List<Tuple<string, ShaderPropertyType>> nameAndType = new List<Tuple<string, ShaderPropertyType>>();
         public Dictionary<string, ShaderPropertyType> nameToType = new Dictionary<string, ShaderPropertyType>();
         public Dictionary<string, int> nameToIndex = new Dictionary<string, int>();
-
+        
         [SerializeField] public List<Color> colors = new List<Color>();
-        [SerializeField] public List<Vector4> vectors = new List<Vector4>();
+        [SerializeField] public List<Vector3> vectors = new List<Vector3>();
         [SerializeField] public List<float> floats = new List<float>();
         [SerializeField] public List<SFloatRange> ranges = new List<SFloatRange>();
         [SerializeField] public List<Texture> texs = new List<Texture>();
@@ -173,7 +190,6 @@ public class ShaderPropertyEdit : MonoBehaviour
             value = Mathf.Clamp(value, min, max);
         }
     }
-
 
 
     [Serializable]
@@ -235,6 +251,14 @@ public class ShaderPropertyEdit : MonoBehaviour
         public ShaderProperties GenerateSP(ShaderProperties bluePrint)
         {
             ShaderProperties sp = new ShaderProperties();
+
+            // Safety check 
+            if(bluePrint == null)
+            {
+                Debug.LogError("No Properties Blueprint");
+                return null;
+            }
+            
             
             for(int i = 0; i < bluePrint.nameAndType.Count; i++)
             {
@@ -242,18 +266,27 @@ public class ShaderPropertyEdit : MonoBehaviour
                 ShaderPropertyType type = bluePrint.nameAndType[i].Item2;
                 int index = bluePrint.nameToIndex[name];
 
+
+                Tuple<string, ShaderPropertyType> nameAndType =
+                    new Tuple<string, ShaderPropertyType>(name, type);
+                sp.nameAndType.Add(nameAndType);
+
                 switch (type)
                 {
                     case ShaderPropertyType.Color:
+                        sp.nameToIndex.Add(name, sp.colors.Count);
                         sp.colors.Add(colors[index].gradient.Evaluate(UnityEngine.Random.Range(0.0f, 1.0f)));
                         break;
                     case ShaderPropertyType.Vector:
+                        sp.nameToIndex.Add(name, sp.vectors.Count);
                         sp.vectors.Add(RandVec(vectors[index].minRange, vectors[index].maxRange));
                         break;
                     case ShaderPropertyType.Float:
+                        sp.nameToIndex.Add(name, sp.floats.Count);
                         sp.floats.Add(UnityEngine.Random.Range(floats[index].range.x, floats[index].range.y));
                         break;
                     case ShaderPropertyType.Range:
+                        sp.nameToIndex.Add(name, sp.ranges.Count);
                         sp.ranges.Add(
                             new SFloatRange(
                                 UnityEngine.Random.Range(ranges[index].range.x, ranges[index].range.y), 
@@ -262,8 +295,9 @@ public class ShaderPropertyEdit : MonoBehaviour
                     case ShaderPropertyType.Texture:
                         break;
                     case ShaderPropertyType.Int:
+                        sp.nameToIndex.Add(name, sp.ints.Count);
                         sp.ints.Add(UnityEngine.Random.Range(ints[index].range.x, ints[index].range.y));
-                        break;
+                        break; 
                 }
             }
 
@@ -289,7 +323,7 @@ public class ShaderPropertyEdit : MonoBehaviour
     private class VectorRange
     {
         [SerializeField] public string vectorName;
-        [SerializeField] public Vector4 minRange, maxRange;
+        [SerializeField] public Vector3 minRange, maxRange;
 
         public VectorRange(string name)
         {

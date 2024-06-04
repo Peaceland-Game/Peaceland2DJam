@@ -11,7 +11,11 @@ public class ShaderPropertiesEditor : Editor
         base.OnInspectorGUI();
 
         ShaderPropertyEdit myScript = (ShaderPropertyEdit)target;
-        if (GUILayout.Button("Load Properties"))
+        if (GUILayout.Button("Load Properties Blueprint"))
+        {
+            myScript.LoadProperties();
+        }
+        if (GUILayout.Button("Overrid Properties Ranges"))
         {
             myScript.LoadProperties();
         }
@@ -21,7 +25,7 @@ public class ShaderPropertiesEditor : Editor
         }
         if (GUILayout.Button("Load into Target Materials"))
         {
-            myScript.GenerateRandomProperties();  
+            myScript.LoadIntoTargetMaterials();  
         }
     }
 }
