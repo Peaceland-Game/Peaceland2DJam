@@ -15,9 +15,13 @@ public class ShaderPropertiesEditor : Editor
         {
             myScript.LoadProperties();
         }
-        if (GUILayout.Button("Generate Properties"))
+        if (GUILayout.Button("Generate Random Properties"))
         {
             myScript.GenerateRandomProperties();
+        }
+        if (GUILayout.Button("Load into Target Materials"))
+        {
+            myScript.GenerateRandomProperties();  
         }
     }
 }
