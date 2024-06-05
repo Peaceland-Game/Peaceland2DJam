@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,14 +16,17 @@ public class CharacterVisualController : MonoBehaviour
 
     [Header("Eyes")]
     [SerializeField] List<Renderer> eyes;
+    [SerializeField] List<EyeSettings> eyeSettings;
 
     private Material[] materials;
 
     private int activeCoroutines = 0;
+    private EmotionalState holdState;
 
     private void Start()
     {
         materials = renderer.materials;
+        holdState = emotionalState;
     }
 
     // Update is called once per frame
@@ -34,33 +38,87 @@ public class CharacterVisualController : MonoBehaviour
 
     private void EyeLogic()
     {
-        switch (emotionalState)
+        if (emotionalState == holdState)
+            return;
+        
+        // Load new settings into each eye renderer's materials 
+        foreach (Renderer eyeRenderer in eyes)
         {
-            case EmotionalState.CONTENT:
-                break;
-            case EmotionalState.SLEEPY:
-                break;
-            case EmotionalState.STUNNED:
-                break;
-            case EmotionalState.ANGRY:
-                break;
-            case EmotionalState.PLEASE:
-                break;
-            case EmotionalState.JOYFUL:
-                break;
+            EyeSettings settings = FindEyeSettings(emotionalState);
+            settings?.LoadAttributesIntoEye(eyeRenderer);
         }
+
+        holdState = emotionalState;
     }
 
+    /// <summary>
+    /// Searches for the first 
+    /// </summary>
+    /// <param name="state"></param>
+    /// <returns></returns>
+    private EyeSettings FindEyeSettings(EmotionalState state)
+    {
+        foreach (EyeSettings eye in eyeSettings)
+        {
+            if(eye.state == state)
+            {
+                return eye;
+            }
+        }
+
+        // Eye not found 
+        Debug.LogWarning("Eye state " + state + " not found");
+        return null;
+    }
+
+    [Serializable]
+    private class EyeSettings
+    {
+        [SerializeField] public EmotionalState state;
+        [SerializeField] ShaderPropertyEdit.ShaderProperties eyeAttributes;
+
+        public void LoadAttributesIntoEye(Renderer eyeRenderer)
+        {
+        // Init nameAndTypeInit
+
+
+        ShaderPropertyEdit.LoadIntoMaterial(eyeRenderer.material, eyeAttributes);
+        }
+
+        /*[SerializeField] public Vector3 eyeCenter;
+        [SerializeField] public float eyeSize; // TODo
+        [SerializeField] public Vector2 pupilSize;
+        [SerializeField] public Vector2 outlineSize;
+        [SerializeField] public Color eyeColor;
+        [SerializeField] public float emissionMultiplier;
+        [SerializeField] public float wobbleSpeed;
+        [SerializeField] public float wobleDistance;
+        [SerializeField] public Vector2 wobbleNoiseScale;
+        [SerializeField] public Vector3 cutoutCenter;
+        [SerializeField] public float cutoutRange;*/
+
+        /*public void ApplyToMat(Renderer renderer)
+        {
+            Material material = renderer.material;
+
+            material.SetVector("_EyeCenter", eyeCenter);
+            material.SetVector("_EyeSize", pupilSize);
+            material.SetVector("_OutlineSize", outlineSize);
+            material.SetColor("_EyeColor", eyeColor);
+            material.SetFloat("_EmissionMultiplier", emissionMultiplier);
+        }*/
+    }
+
+
     private enum EmotionalState
-    { 
+    {
         CONTENT,
         SLEEPY,
         STUNNED,
         ANGRY,
-        PLEASE,
+        PLEASED,
         JOYFUL
     }
-
 
     #region Debug
 

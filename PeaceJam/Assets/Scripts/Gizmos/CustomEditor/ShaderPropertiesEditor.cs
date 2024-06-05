@@ -17,7 +17,7 @@ public class ShaderPropertiesEditor : Editor
         }
         if (GUILayout.Button("Overrid Properties Ranges"))
         {
-            myScript.LoadProperties();
+            myScript.OverrideRanges();
         }
         if (GUILayout.Button("Generate Random Properties"))
         {
