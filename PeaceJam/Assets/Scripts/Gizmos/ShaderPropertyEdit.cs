@@ -127,8 +127,11 @@ public class ShaderPropertyEdit : MonoBehaviour
     /// function to finalize it 
     /// </summary>
     /// <param name="properties"></param>
-    public void GeneratePropertyHelpers(ShaderProperties properties)
+    public static void GeneratePropertyHelpers(ShaderProperties properties, Shader shader)
     {
+        properties.nameAndType = new List<Tuple<string, ShaderPropertyType>>();
+        properties.nameToType = new Dictionary<string, ShaderPropertyType>();
+
         int propertyCount =
             properties.colors.Count + 
             properties.vectors.Count + 
@@ -137,7 +140,14 @@ public class ShaderPropertyEdit : MonoBehaviour
             properties.texs.Count + 
             properties.ints.Count;
 
+        int cols = 0;
+        int vecs = 0;
+        int floats = 0;
+        int ranges = 0;
+        int texs = 0;
+        int ints = 0;
 
+        // Combine all properties into lists 
         for (int i = 0; i < propertyCount; i++)
         {
             Tuple<string, ShaderPropertyType> nameAndType =
@@ -145,9 +155,37 @@ public class ShaderPropertyEdit : MonoBehaviour
 
             string name = shader.GetPropertyName(i);
             ShaderPropertyType type = shader.GetPropertyType(i);
+            properties.nameAndType.Add(nameAndType);
+            properties.nameToType.Add(name, type);
 
-            propertiesBP.nameAndType.Add(nameAndType);
-            propertiesBP.nameToType.Add(name, type);
+            // Keep track of property indecies 
+            switch (type)
+            {
+                case ShaderPropertyType.Color:
+                    properties.nameToIndex[name] = cols;
+                    cols++;
+                    break;
+                case ShaderPropertyType.Vector:
+                    properties.nameToIndex[name] = vecs;
+                    vecs++;
+                    break;
+                case ShaderPropertyType.Float:
+                    properties.nameToIndex[name] = floats;
+                    floats++;
+                    break;
+                case ShaderPropertyType.Range:
+                    properties.nameToIndex[name] = ranges;
+                    ranges++;
+                    break;
+                case ShaderPropertyType.Texture:
+                    properties.nameToIndex[name] = texs;
+                    texs++;
+                    break;
+                case ShaderPropertyType.Int:
+                    properties.nameToIndex[name] = ints;
+                    ints++;
+                    break;
+            }
         }
     }
 
@@ -158,13 +196,14 @@ public class ShaderPropertyEdit : MonoBehaviour
     /// <param name="properties"></param>
     public static void LoadIntoMaterial(Material material, ShaderProperties properties)
     {
-        print(properties.nameAndType.Count);
+
         for (int i = 0; i < properties.nameAndType.Count; i++)
         {
             string name = properties.nameAndType[i].Item1;
             ShaderPropertyType type = properties.nameAndType[i].Item2;
+            
             int index = properties.nameToIndex[name];
-
+            
             switch (type)
             {
                 case ShaderPropertyType.Color:

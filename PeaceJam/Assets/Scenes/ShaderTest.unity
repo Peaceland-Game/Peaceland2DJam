@@ -123,6 +123,122 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!21 &26621694
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eye (Instance)
+  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CutoutRange: 0.13
+    - _EmissionMultiplier: 0.2
+    - _EyeWobbleDistance: 0.03
+    - _EyeWobbleSpeed: 0.04
+    - _OutlineSize: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Smoothness: 0
+    - _WobbleDistance: 0.05
+    - _WobbleSpeed: 0.4
+    - _canWobble: 0
+    m_Colors:
+    - _CutoutCenter: {r: 0, g: 0.12, b: 0, a: 0}
+    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
+    - _EyeSize: {r: 0.09, g: 0.09, b: 0, a: 0}
+    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
+    - _OutlineSize: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!21 &52615545
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Eye (Instance)
+  m_Shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CutoutRange: 0.13
+    - _EmissionMultiplier: 0.2
+    - _EyeWobbleDistance: 0.03
+    - _EyeWobbleSpeed: 0.04
+    - _OutlineSize: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Smoothness: 0
+    - _WobbleDistance: 0.05
+    - _WobbleSpeed: 0.4
+    - _canWobble: 0
+    m_Colors:
+    - _CutoutCenter: {r: 0, g: 0.12, b: 0, a: 0}
+    - _EyeCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeColor: {r: 0.6627451, g: 0.6784314, b: 0.35686275, a: 1}
+    - _EyeSize: {r: 0.09, g: 0.09, b: 0, a: 0}
+    - _OutlineColor: {r: 0.33333334, g: 0.34117648, b: 0.34901962, a: 1}
+    - _OutlineSize: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _WobbleScale: {r: 0.1, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &60093206
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,79 +671,137 @@ MonoBehaviour:
   numToGenerate: 2
   generatedProperties:
   - colors:
-    - {r: 0.1763118, g: 0.56730145, b: 0.53494287, a: 1}
-    - {r: 0.21535748, g: 0.23740375, b: 0.1942665, a: 1}
-    - {r: 0.7034936, g: 0.6845384, b: 0.62240833, a: 1}
+    - colorName: _Primary
+      color: {r: 0.31235364, g: 0.78540504, b: 0.76137865, a: 1}
+    - colorName: _Secondary
+      color: {r: 0.37407586, g: 0.7291748, b: 0.6945499, a: 1}
+    - colorName: _Highlight
+      color: {r: 0.6834605, g: 0.7272078, b: 0.71235037, a: 1}
     vectors:
-    - {x: -0.86037135, y: 0.08531487, z: 0}
-    - {x: 0.06312527, y: -0.0654714, z: 0}
-    - {x: 0.4429044, y: 0.30661193, z: 0}
-    - {x: 0.079436325, y: 0.044108897, z: 0}
-    - {x: 0.25666046, y: 0.22891064, z: 0}
+    - vectorName: _PatternDirection
+      vector: {x: 0.4864485, y: 0.79298997, z: 0}
+    - vectorName: _SimpleCenter
+      vector: {x: -0.06821044, y: 0.37843835, z: 0}
+    - vectorName: _SimpleSize
+      vector: {x: 0.9526547, y: 0.53668475, z: 0}
+    - vectorName: _VoronoiCenter
+      vector: {x: 0.04313533, y: 0.07967943, z: 0}
+    - vectorName: _VoronoiSize
+      vector: {x: 0.46940875, y: 0.51040274, z: 0}
     floats:
-    - 0.22795609
-    - 11.573234
-    - 0.14798094
-    - 0.4837153
-    - 0.29096135
-    - 27.143253
-    - 9.946882
-    - 0.32135206
-    - 0.72458947
-    - 0.08075997
-    - 0.71938294
-    - 0.15642866
-    - 0.67837083
-    - 0.019324327
-    - 12.354455
-    - 3.2221062
-    - 0.13972026
+    - floatName: _TimeScale
+      value: 0.15831989
+    - floatName: _SimpleNoiseScale
+      value: 37.98844
+    - floatName: _SimpleGradientThresholdA
+      value: 0.13388926
+    - floatName: _SimpleGradientThresholdB
+      value: 0.6797225
+    - floatName: _Rescale
+      value: 0.23040512
+    - floatName: _AngleOffset
+      value: 36.28064
+    - floatName: _CellDensity
+      value: 9.434699
+    - floatName: _VoronoiGradientThresholdA
+      value: 0.3169868
+    - floatName: _VoronoiGradientThresholdB
+      value: 0.7908197
+    - floatName: _PrimaryMetallic
+      value: 0.12658985
+    - floatName: _SecondaryMetallic
+      value: 0.46768105
+    - floatName: _PrimarySmoothness
+      value: 0.27496907
+    - floatName: _SecondarySmoothness
+      value: 0.52508175
+    - floatName: _DisplacementScale
+      value: 0.00994074
+    - floatName: _VertexAngleOffset
+      value: 18.209452
+    - floatName: _VertexCellDensity
+      value: 4.870136
+    - floatName: _DisTimeScale
+      value: 0.1913383
     ranges:
-    - min: 0
-      max: 1
-      value: 0.7519424
-    - min: 0
-      max: 1
-      value: 0.8875456
+    - rangeName: _NoiseType
+      range:
+        min: 0
+        max: 1
+        value: 0.52229434
+    - rangeName: _Saturation
+      range:
+        min: 0
+        max: 1
+        value: 0.5739736
     texs: []
-    ints: 
+    ints: []
   - colors:
-    - {r: 0.34661353, g: 0.62259483, b: 0.5860083, a: 1}
-    - {r: 0.101894245, g: 0.15344097, b: 0.1103037, a: 1}
-    - {r: 0.7052947, g: 0.68070215, b: 0.6143219, a: 1}
+    - colorName: _Primary
+      color: {r: 0.34960938, g: 0.63422155, b: 0.59784913, a: 1}
+    - colorName: _Secondary
+      color: {r: 0.20112269, g: 0.55748045, b: 0.51323336, a: 1}
+    - colorName: _Highlight
+      color: {r: 0.7128045, g: 0.6647069, b: 0.58060575, a: 1}
     vectors:
-    - {x: 0.5545318, y: 0.46334502, z: 0}
-    - {x: 0.19934984, y: -0.019985765, z: 0}
-    - {x: 0.9901311, y: 0.51525104, z: 0}
-    - {x: -0.06807596, y: 0.18647003, z: 0}
-    - {x: 0.30707133, y: 0.3900291, z: 0}
+    - vectorName: _PatternDirection
+      vector: {x: -0.8688538, y: 0.3894491, z: 0}
+    - vectorName: _SimpleCenter
+      vector: {x: 0.03445342, y: -0.10161486, z: 0}
+    - vectorName: _SimpleSize
+      vector: {x: 0.5089377, y: 0.5267699, z: 0}
+    - vectorName: _VoronoiCenter
+      vector: {x: -0.032083355, y: 0.109801315, z: 0}
+    - vectorName: _VoronoiSize
+      vector: {x: 0.5590137, y: 0.51050496, z: 0}
     floats:
-    - 0.15355498
-    - 12.539601
-    - 0.10230495
-    - 0.7079767
-    - 0.23274566
-    - 23.149061
-    - 14.342849
-    - 0.44141755
-    - 0.7771766
-    - 0.016122222
-    - 0.6548504
-    - 0.24630268
-    - 0.87103397
-    - 0.0136555
-    - 9.72667
-    - 1.3765435
-    - 0.24518625
+    - floatName: _TimeScale
+      value: 0.12179415
+    - floatName: _SimpleNoiseScale
+      value: 27.180693
+    - floatName: _SimpleGradientThresholdA
+      value: 0.14329322
+    - floatName: _SimpleGradientThresholdB
+      value: 0.7323102
+    - floatName: _Rescale
+      value: 0.2557547
+    - floatName: _AngleOffset
+      value: 23.579796
+    - floatName: _CellDensity
+      value: 9.221866
+    - floatName: _VoronoiGradientThresholdA
+      value: 0.44820234
+    - floatName: _VoronoiGradientThresholdB
+      value: 0.688424
+    - floatName: _PrimaryMetallic
+      value: 0.12485381
+    - floatName: _SecondaryMetallic
+      value: 0.3344449
+    - floatName: _PrimarySmoothness
+      value: 0.15449037
+    - floatName: _SecondarySmoothness
+      value: 0.5286602
+    - floatName: _DisplacementScale
+      value: 0.016284645
+    - floatName: _VertexAngleOffset
+      value: 3.6500406
+    - floatName: _VertexCellDensity
+      value: 4.4876065
+    - floatName: _DisTimeScale
+      value: 0.18293223
     ranges:
-    - min: 0
-      max: 1
-      value: 0.94595337
-    - min: 0
-      max: 1
-      value: 0.2018472
+    - rangeName: _NoiseType
+      range:
+        min: 0
+        max: 1
+        value: 0.9510181
+    - rangeName: _Saturation
+      range:
+        min: 0
+        max: 1
+        value: 0.19151175
     texs: []
-    ints: 
+    ints: []
 --- !u!1 &353390167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5640,6 +5814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5722,6 +5901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20732,6 +20916,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20776,7 +20965,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116590683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87238aca6772515468eb0566b7773c4a, type: 3}
   m_Name: 
@@ -21074,6 +21263,1419 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9675b1eabd7a22347a31c8d409ed661a, type: 3}
+--- !u!1001 &1566927355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 127582114536574385, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 52615545}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000053644175
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_Name
+      value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: emotionalState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].state
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].state
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].state
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].state
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[1].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[2].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[3].value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[1].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[2].value
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[3].value
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[1].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[2].value
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[3].value
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[4].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[1].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[2].value
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[3].value
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[4].value
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[1].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[2].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[3].value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[4].value
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[1].value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[2].value
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[3].value
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[4].value
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].color.b
+      value: 0.35686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].color.g
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].color.r
+      value: 0.6627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].color.b
+      value: 0.34901962
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].colorName
+      value: _EyeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[0].floatName
+      value: _Smoothness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[1].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[3].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.data[4].floatName
+      value: _CutoutRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[1].vector.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[1].vector.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[2].vector.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[2].vector.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[3].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[3].vector.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[4].vector.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[4].vector.y
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].colorName
+      value: _EyeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[0].floatName
+      value: _Smoothness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[1].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[3].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.data[4].floatName
+      value: _CutoutRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[1].vector.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[1].vector.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[2].vector.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[2].vector.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[3].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[3].vector.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[4].vector.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[4].vector.y
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].colorName
+      value: _EyeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[0].floatName
+      value: _Smoothness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[1].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[3].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.data[4].floatName
+      value: _CutoutRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[0].vector.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[1].vector.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[1].vector.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[2].vector.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[2].vector.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[3].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[3].vector.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[4].vector.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[4].vector.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].colorName
+      value: _EyeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[0].floatName
+      value: _Smoothness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[1].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[3].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.data[4].floatName
+      value: _CutoutRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[0].vector.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[1].vector.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[1].vector.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[2].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[2].vector.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[3].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[3].vector.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[4].vector.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[4].vector.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].colorName
+      value: _EyeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[0].floatName
+      value: _Smoothness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[1].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[3].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.data[4].floatName
+      value: _CutoutRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[1].vector.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[1].vector.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[2].vector.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[2].vector.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[3].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[3].vector.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[4].vector.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[4].vector.y
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].colorName
+      value: _EyeColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].colorName
+      value: _OutlineColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[0].floatName
+      value: _Smoothness
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[1].floatName
+      value: _EmissionMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[2].floatName
+      value: _WobbleSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[3].floatName
+      value: _WobbleDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.data[4].floatName
+      value: _CutoutRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[1].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[1].vector.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[2].vector.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[2].vector.y
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[3].vector.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[3].vector.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[4].vector.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[4].vector.y
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[0].vectorName
+      value: _EyeCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[1].vectorName
+      value: _EyeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[2].vectorName
+      value: _OutlineSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.data[4].vectorName
+      value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[0].vectorName
+      value: _EyeCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[1].vectorName
+      value: _EyeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[2].vectorName
+      value: _OutlineSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.data[4].vectorName
+      value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[0].vectorName
+      value: _EyeCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[1].vectorName
+      value: _EyeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[2].vectorName
+      value: _OutlineSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.data[4].vectorName
+      value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[0].vectorName
+      value: _EyeCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[1].vectorName
+      value: _EyeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[2].vectorName
+      value: _OutlineSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.data[4].vectorName
+      value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[0].vectorName
+      value: _EyeCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[1].vectorName
+      value: _EyeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[2].vectorName
+      value: _OutlineSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.data[4].vectorName
+      value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[0].vectorName
+      value: _EyeCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[1].vectorName
+      value: _EyeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[2].vectorName
+      value: _OutlineSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[3].vectorName
+      value: _WobbleScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.data[4].vectorName
+      value: _CutoutCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333176607482636394, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 26621694}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21500,579 +23102,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9675b1eabd7a22347a31c8d409ed661a, type: 3}
---- !u!1001 &4789485115894131514
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.00000053644175
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630760878703589903, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: m_Name
-      value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].state
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].state
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].state
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].state
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.floats.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.floats.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.floats.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.floats.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.floats.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.floats.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.vectors.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.vectors.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.vectors.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.vectors.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.vectors.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.vectors.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[0].eyeAttributes.colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[1].eyeAttributes.colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[2].eyeAttributes.colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[3].eyeAttributes.colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[4].eyeAttributes.colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3390587007991953810, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      propertyPath: eyeSettings.Array.data[5].eyeAttributes.colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4789485115894131516}
-  m_SourcePrefab: {fileID: 100100000, guid: 9675b1eabd7a22347a31c8d409ed661a, type: 3}
---- !u!1 &4789485115894131515 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2046424926222109898, guid: 9675b1eabd7a22347a31c8d409ed661a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4789485115894131514}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4789485115894131516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4789485115894131515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128d476a6b5fae64a95744b3af4ddd40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: -6465566751694194690, guid: b3890c52e26326f4690fa5e053bb84f3, type: 3}
-  targetMaterials: []
-  propertiesRanges:
-    colors:
-    - colorName: _EyeColor
-      gradient:
-        serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
-        atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
-        atime4: 0
-        atime5: 0
-        atime6: 0
-        atime7: 0
-        m_Mode: 0
-        m_ColorSpace: -1
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
-    - colorName: _OutlineColor
-      gradient:
-        serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
-        atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
-        atime4: 0
-        atime5: 0
-        atime6: 0
-        atime7: 0
-        m_Mode: 0
-        m_ColorSpace: -1
-        m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
-    vectors:
-    - vectorName: _EyeCenter
-      minRange: {x: 0, y: 0, z: 0}
-      maxRange: {x: 0, y: 0, z: 0}
-    - vectorName: _EyeSize
-      minRange: {x: 0, y: 0, z: 0}
-      maxRange: {x: 0, y: 0, z: 0}
-    - vectorName: _OutlineSize
-      minRange: {x: 0, y: 0, z: 0}
-      maxRange: {x: 0, y: 0, z: 0}
-    - vectorName: _WobbleScale
-      minRange: {x: 0, y: 0, z: 0}
-      maxRange: {x: 0, y: 0, z: 0}
-    - vectorName: _CutoutCenter
-      minRange: {x: 0, y: 0, z: 0}
-      maxRange: {x: 0, y: 0, z: 0}
-    floats:
-    - floatName: _Smoothness
-      range: {x: 0, y: 0}
-    - floatName: _EmissionMultiplier
-      range: {x: 0, y: 0}
-    - floatName: _WobbleSpeed
-      range: {x: 0, y: 0}
-    - floatName: _WobbleDistance
-      range: {x: 0, y: 0}
-    - floatName: _CutoutRange
-      range: {x: 0, y: 0}
-    ranges: []
-    texs: []
-    ints: []
-  numToGenerate: 1
-  generatedProperties:
-  - colors:
-    - {r: 1, g: 1, b: 1, a: 1}
-    - {r: 1, g: 1, b: 1, a: 1}
-    vectors:
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    floats:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    ranges: []
-    texs: []
-    ints: 

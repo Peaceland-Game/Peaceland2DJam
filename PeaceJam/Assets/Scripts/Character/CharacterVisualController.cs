@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CharacterVisualController : MonoBehaviour
 {
-
     [Header("Debug")]
     [SerializeField] Renderer renderer;
     [SerializeField] float speed;
@@ -36,19 +35,27 @@ public class CharacterVisualController : MonoBehaviour
         EyeLogic();
     }
 
-    private void EyeLogic()
+    public void EyeLogic()
     {
         if (emotionalState == holdState)
+        {
             return;
-        
+        }
+
+        holdState = emotionalState;
+
+        UpdateEyes();
+
+    }
+
+    public void UpdateEyes()
+    {
         // Load new settings into each eye renderer's materials 
         foreach (Renderer eyeRenderer in eyes)
         {
             EyeSettings settings = FindEyeSettings(emotionalState);
-            settings?.LoadAttributesIntoEye(eyeRenderer);
+            settings?.LoadAttributesIntoEye(eyeRenderer, eyeRenderer.material.shader);
         }
-
-        holdState = emotionalState;
     }
 
     /// <summary>
@@ -77,36 +84,13 @@ public class CharacterVisualController : MonoBehaviour
         [SerializeField] public EmotionalState state;
         [SerializeField] ShaderPropertyEdit.ShaderProperties eyeAttributes;
 
-        public void LoadAttributesIntoEye(Renderer eyeRenderer)
+        public void LoadAttributesIntoEye(Renderer eyeRenderer, Shader shader)
         {
-        // Init nameAndTypeInit
+            // Init nameAndTypeInit
 
-
-        ShaderPropertyEdit.LoadIntoMaterial(eyeRenderer.material, eyeAttributes);
+            ShaderPropertyEdit.GeneratePropertyHelpers(eyeAttributes, shader);
+            ShaderPropertyEdit.LoadIntoMaterial(Application.isEditor ? eyeRenderer.sharedMaterial : eyeRenderer.material, eyeAttributes);
         }
-
-        /*[SerializeField] public Vector3 eyeCenter;
-        [SerializeField] public float eyeSize; // TODo
-        [SerializeField] public Vector2 pupilSize;
-        [SerializeField] public Vector2 outlineSize;
-        [SerializeField] public Color eyeColor;
-        [SerializeField] public float emissionMultiplier;
-        [SerializeField] public float wobbleSpeed;
-        [SerializeField] public float wobleDistance;
-        [SerializeField] public Vector2 wobbleNoiseScale;
-        [SerializeField] public Vector3 cutoutCenter;
-        [SerializeField] public float cutoutRange;*/
-
-        /*public void ApplyToMat(Renderer renderer)
-        {
-            Material material = renderer.material;
-
-            material.SetVector("_EyeCenter", eyeCenter);
-            material.SetVector("_EyeSize", pupilSize);
-            material.SetVector("_OutlineSize", outlineSize);
-            material.SetColor("_EyeColor", eyeColor);
-            material.SetFloat("_EmissionMultiplier", emissionMultiplier);
-        }*/
     }
 
 
@@ -115,7 +99,7 @@ public class CharacterVisualController : MonoBehaviour
         CONTENT,
         SLEEPY,
         STUNNED,
-        ANGRY,
+        SAD,
         PLEASED,
         JOYFUL
     }
