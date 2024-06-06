@@ -43,6 +43,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AnimSpeed: -0.7
+    - _NoiseScale: 7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Threshold: 2.08
