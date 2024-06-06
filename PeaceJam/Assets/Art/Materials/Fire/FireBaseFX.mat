@@ -42,7 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AnimSpeed: -1
+    - _AnimSpeed: -0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Threshold: 2.08
@@ -51,8 +51,8 @@ Material:
     - _parabScale: 0.91
     - _parabVertOffset: -0.26
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _parabOffset: {r: -0.5, g: 1, b: 0, a: 0}
+    - _Color: {r: 0.9056604, g: 0.07404765, b: 0.07404765, a: 1}
+    - _parabOffset: {r: -0.5, g: 1.21, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &776136624648307726
 MonoBehaviour:
