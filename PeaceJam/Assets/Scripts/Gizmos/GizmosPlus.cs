@@ -1,6 +1,7 @@
 using System.Drawing;
 using System.Reflection;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class GizmosPlus : MonoBehaviour
 {
@@ -18,12 +19,27 @@ public class GizmosPlus : MonoBehaviour
         }
     }
 
+    public static void DrawWirePlaneNoX(Vector3 pos, Vector3 n, Vector2 size)
+    {
+        Vector3[] points = GetPlanePoints(n, size);
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            Vector3 point = pos + points[i];
+            Vector3 next = pos + points[(i + 1) < points.Length ? i + 1 : 0];
+
+            Gizmos.DrawLine(point, next);
+        }
+
+    }
+
     public static void DrawWireArrow(Vector3 pos, Vector3 n, float stemScale, float headScale)
     {
-        Vector3 endOfStem = pos + n * stemScale;
+        Vector3 norm = n.normalized;
+        Vector3 endOfStem = pos + norm * stemScale;
 
         Gizmos.DrawLine(pos, endOfStem);
-        DrawArrowHead(endOfStem, n, headScale);
+        DrawArrowHead(endOfStem, norm, headScale);
     }
 
     private static void DrawArrowHead(Vector3 pos, Vector3 n, float headScale)
