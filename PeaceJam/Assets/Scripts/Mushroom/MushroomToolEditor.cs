@@ -11,9 +11,24 @@ public class MushroomToolEditor : Editor
         base.OnInspectorGUI();
 
         MushroomTool myScript = (MushroomTool)target;
-        if (GUILayout.Button("Reset Mushrooms"))
+        if (GUILayout.Button("Redistribute Mushrooms"))
         {
-            myScript.ResetMushrooms();
+            myScript.RedistributeMushrooms();
+        }
+
+        if (GUILayout.Button("Randomize Attributes"))
+        {
+            myScript.RandomizeAttributes();
+        }
+
+        if (GUILayout.Button("Spawn Random Mushroom Type"))
+        {
+            myScript.SpawnRandomMushroomType();
+        }
+
+        if (GUILayout.Button("Clear"))
+        {
+            myScript.Clear();
         }
     }
 }
