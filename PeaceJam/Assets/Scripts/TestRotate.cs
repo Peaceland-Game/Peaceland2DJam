@@ -29,6 +29,7 @@ public class TestRotate : MonoBehaviour
         {
             timer = 0;
             rotationAngle = -rotationAngle;
+            Component.Destroy(this);
         }
         transform.Rotate(Vector3.up, rotationAngle * Time.deltaTime);
     }
