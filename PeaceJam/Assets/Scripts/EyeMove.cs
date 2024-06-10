@@ -14,7 +14,8 @@ public class EyeMove : MonoBehaviour
     [SerializeField] private Transform bodyTransform;
     [SerializeField] private float force = 1;
     [SerializeField] private float dotProduct;
-    [SerializeField] private Rigidbody body;
+    [SerializeField] private Rigidbody eyesRigidBody;
+    [SerializeField] private Vector3 torque;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +33,14 @@ public class EyeMove : MonoBehaviour
         // Only apply torque if the eye angle is offset enough
         // from the body angle, and only if there isn't already
         // torque being applied to the eyes
-        if(dotProduct > -.99 && dotProduct < .99
-            && body.GetAccumulatedTorque() == Vector3.zero)
+        if(Mathf.Abs(dotProduct) < 0.95
+            && eyesRigidBody.GetAccumulatedTorque() == Vector3.zero)
         {
-            body.AddTorque((dotProduct * force) * transform.up,
+            // TODO: Torque is somehow related to rotation angle set in the TestRotate
+            // script, so figure out why that is happening.
+            eyesRigidBody.AddRelativeTorque((dotProduct * force) * transform.up,
                 ForceMode.VelocityChange);
-        }        
+        }
+        torque = eyesRigidBody.GetAccumulatedTorque();
     }
 }
