@@ -43,9 +43,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AnimSpeed: -0.7
+    - _EmissionScale: 0
     - _NoiseScale: 7
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _RandomID: 0
     - _Threshold: 2.08
     - _parabA: -4
     - _parabB: 0
