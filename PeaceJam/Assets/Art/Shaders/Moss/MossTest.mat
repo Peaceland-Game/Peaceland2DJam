@@ -66,12 +66,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _DisSpread: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _VoronoiCellDensity: 5
+    - _VoronoiOffset: 3.36
     m_Colors:
     - _Dir: {r: 0, g: 1, b: 0, a: 0}
     - _MossColor: {r: 0.18003806, g: 0.31132078, b: 0.17230326, a: 1}
     - _MossRange: {r: 0, g: 0.03, b: 0, a: 0}
+    - _MossRemap: {r: 0, g: 1, b: 0, a: 0}
     - _MossSmoothstep: {r: -0.05, g: 0.22, b: 0, a: 0}
     - _UVOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UVTile: {r: 1, g: 1, b: 0, a: 0}
