@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteAlways]
 public class FlickerLight : MonoBehaviour
 {
     [SerializeField] Light pointLight; 
@@ -13,7 +14,8 @@ public class FlickerLight : MonoBehaviour
     void Update()
     {
         float lerp = Mathf.PerlinNoise1D(Time.time * flickerSpeed);
-        pointLight.intensity = Mathf.Lerp(lerp, intensityRange.x, intensityRange.y);
-        pointLight.range = Mathf.Lerp(lerp, lightRangeRange.x, lightRangeRange.y);
+        pointLight.intensity = Mathf.Lerp(intensityRange.x, intensityRange.y, lerp);
+        print(lightRangeRange.y);
+        pointLight.range = Mathf.Lerp(lightRangeRange.y, lightRangeRange.x, lerp);
     }
 }
