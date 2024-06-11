@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _FrontTexture:
-        m_Texture: {fileID: 2800000, guid: 8fd797bb52ab32d48acd0400d7e8362a, type: 3}
+        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SideTexture:
-        m_Texture: {fileID: 2800000, guid: 63e60c3e5abc7af4c9b8ebcc33711fc1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d82e20e51db7564397561f780a97f7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TopTexture:
@@ -72,10 +72,10 @@ Material:
     - _Sharpness: 43.97
     m_Colors:
     - _FrontOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _FrontTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _FrontTiling: {r: 4, g: 4, b: 0, a: 0}
     - _SideOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _SideTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _SideTiling: {r: 2, g: 2, b: 0, a: 0}
     - _TopOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _TopTiling: {r: 5, g: 5, b: 0, a: 0}
+    - _TopTiling: {r: 4, g: 4, b: 0, a: 0}
     - _Vector2: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
