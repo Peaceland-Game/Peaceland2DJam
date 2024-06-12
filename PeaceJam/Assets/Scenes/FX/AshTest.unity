@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08143757, g: 0.074456416, b: 0.05113447, a: 1}
+  m_IndirectSpecularColor: {r: 0.0034526181, g: 0.0029614076, b: 0.00131404, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 138884281}
   - component: {fileID: 138884280}
   m_Layer: 0
-  m_Name: Snow
+  m_Name: Ash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,14 +321,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984991456}
-  m_LocalRotation: {x: -0.03628233, y: -0.25863633, z: -0.009721816, w: 0.96524423}
+  m_LocalRotation: {x: -0.13178776, y: -0.25639874, z: -0.035312388, w: 0.95689327}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -4.305, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: -15.683, y: -30, z: 0}
 --- !u!114 &984991459
 MonoBehaviour:
   m_ObjectHideFlags: 0
