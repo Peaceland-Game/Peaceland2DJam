@@ -11,12 +11,13 @@ public class MovingSphere : MonoBehaviour
     float maxAcceleration = 1f;
 
     [SerializeField]
-    float jumpSpeed = 5.0f;
+    float jumpHeight = 5.0f;
 
     private Vector3 desiredVel;
     private Vector3 vel;
 
-    public bool desiredJump;
+    private bool desiredJump;
+    private bool onGround;
 
     Rigidbody rb;
     void Awake()
@@ -29,7 +30,7 @@ public class MovingSphere : MonoBehaviour
         desiredVel = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
         desiredVel = Vector3.ClampMagnitude(desiredVel, 1.0f) * maxSpeed;
 
-        desiredJump |= Input.GetButtonDown("Jump");
+        desiredJump |= Input.GetButtonDown("Jump") && onGround;
     }
 
     private void FixedUpdate()
@@ -52,12 +53,15 @@ public class MovingSphere : MonoBehaviour
 
         // Send to rigidbody 
         rb.velocity = vel;
+
+
+        onGround = false;
     }
 
     void Jump()
     {
         // Change instant velocity not desired 
-        vel.y += jumpSpeed;
+        vel.y += Mathf.Sqrt(-2f * Physics.gravity.y * jumpHeight);
     }
 
 
@@ -65,5 +69,18 @@ public class MovingSphere : MonoBehaviour
     {
         Vector3 target = this.transform.position + new Vector3(displacement.x, 0.0f, displacement.y); ;
         this.transform.position = target;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        EvaluateCollisions(collision);
+    }
+
+    private void EvaluateCollisions(Collision collision)
+    {
+        for(int i = 0; i < collision.contactCount; i++) 
+        {
+            onGround |= collision.contacts[i].normal.y >= 0.9f;
+        }
     }
 }
