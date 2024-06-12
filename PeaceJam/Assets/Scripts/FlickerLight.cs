@@ -15,7 +15,6 @@ public class FlickerLight : MonoBehaviour
     {
         float lerp = Mathf.PerlinNoise1D(Time.time * flickerSpeed);
         pointLight.intensity = Mathf.Lerp(intensityRange.x, intensityRange.y, lerp);
-        print(lightRangeRange.y);
         pointLight.range = Mathf.Lerp(lightRangeRange.y, lightRangeRange.x, lerp);
     }
 }
